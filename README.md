@@ -14,3 +14,9 @@
 ['U', 'n', 'C', 'h', '_', '0', 'f', '_']
 UnCh_0f_
 ```
+
+## usb_input_pcap_to_string
+
+WiresharkのUSBの入力キャプチャをStringに変換する。
+実行した際に`PostFail`が表示されることがある。
+これは環境依存なので注意すること。（例えばSHIFTキーに割当たってるなど）
