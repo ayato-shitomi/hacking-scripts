@@ -1,7 +1,7 @@
 # hacking-scripts
 ハッキングやセキュリティ関連のスクリプト
 
-## ascii decoddr
+## ascii_decoddr
 
 任意の進数から10進数への変換を行い、ASCIIへの変換もする
 
@@ -38,4 +38,28 @@ Value map : 2-> PostFail
 Value map : 48-> ]
 Value map : 2-> PostFail
 42ctf[XXX]
+```
+
+## easy_letter_changer
+
+簡単な文字チェンジャー、大文字にしたり小文字にしたりする。さらに、それぞれのMD5とSHA256を求める。
+
+```
+換したい文字列を入力してください:     42CTF{you're_ready_for_the_real_world}
+
+42CTF{you're_ready_for_the_real_world}
+        md5 hash:        d5fc4dac1f976732a02e42f47f6b5be1
+        sha256:          2c7eb90ca60a6cfb5830ddf0d2685c87a6a89aa55d258d0eab0fe2b9cdf3130b
+
+42CTF{YOU'RE_READY_FOR_THE_REAL_WORLD}
+        md5 hash:        318bad1566e6fa84e2590194f0042d37
+        sha256:          1fd1ff1e14363528ac6beeeafc9aa79460246780214395082fb185a67a580b2a
+
+42ctf{you're_ready_for_the_real_world}
+        md5 hash:        45c0521242a6a744751257a007605eec
+        sha256:          306d2d6a6d68b7e7cc37e3c7c67b75f1381baee93b77e6872413b21049b1461f
+
+42Ctf{You'Re_Ready_For_The_Real_World}
+        md5 hash:        5f376ab0c9a3a3f7ccb6530fe70b5bf0
+        sha256:          4b59e9ecbd67ce5a4cb99c59c1b887289171cad11b90102f4345e0f9196df027
 ```
