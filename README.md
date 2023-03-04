@@ -20,3 +20,22 @@ UnCh_0f_
 WiresharkのUSBの入力キャプチャをStringに変換する。
 実行した際に`PostFail`が表示されることがある。
 これは環境依存なので注意すること。（例えばSHIFTキーに割当たってるなど）
+
+```
+TXT形式にエクスポートしたファイル:      a.txt
+POSTFAILを表示するか y/n:       n
+Value map : 33-> 4
+Value map : 31-> 2
+Value map : 6-> c
+Value map : 23-> t
+＜中略＞
+Value map : 34-> 5
+Value map : 4-> a
+Value map : 17-> n
+Value map : 32-> 3
+Value map : 2-> PostFail
+Value map : 2-> PostFail
+Value map : 48-> ]
+Value map : 2-> PostFail
+42ctf[XXX]
+```
