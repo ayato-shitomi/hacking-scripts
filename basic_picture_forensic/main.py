@@ -7,7 +7,7 @@ def	run_cmd(cmd):
 	print(cmd)
 	os.system(cmd)
 
-i = input("画像ファイルは実行ファイル都同じ階層に配置してください\\n画像ファイルを選択:	")
+i = input("画像ファイルは実行ファイル都同じ階層に配置してください\n画像ファイルを選択:	")
 
 path = (str(datetime.datetime.now()) + "_" + i).replace(".","-").replace(":","-").replace(" ", "_")
 
