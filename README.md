@@ -63,3 +63,32 @@ Value map : 2-> PostFail
         md5 hash:        5f376ab0c9a3a3f7ccb6530fe70b5bf0
         sha256:          4b59e9ecbd67ce5a4cb99c59c1b887289171cad11b90102f4345e0f9196df027
 ```
+
+## basic_picture_forensic
+
+簡易的に画像ファイルなどからstringsとexif情報を取得してBase64でデコードする。文字検索が行われるのでみやすい。
+
+```
+画像ファイルを選択: cat.jpg
+mkdir ./2023-03-04_23-46-00-996052_cat-jpg
+strings cat.jpg >> ./2023-03-04_23-46-00-996052_cat-jpg/strings.txt
+exiftool cat.jpg >> ./2023-03-04_23-46-00-996052_cat-jpg/exiftool.txt
+
+=== plain text and base64 on strings command ===
+ ./2023-03-04_23-06-01-592408_cat-jpg/strings.txt:0      PicoCTF 
+ ./2023-03-04_23-06-01-592408_cat-jpg/strings.txt:0          <rdf:li xml:lang='x-default'>PicoCTF</rdf:li> 
+
+=== plain text and base64 decode on exif command ===
+ ./2023-03-04_23-06-01-592408_cat-jpg/exiftool.txt:0 '12.54' ->          b'\xd7nx'
+ ./2023-03-04_23-06-01-592408_cat-jpg/exiftool.txt:2 '.' ->      b''
+ ./2023-03-04_23-06-01-592408_cat-jpg/exiftool.txt:7 '-rw-r--r--' ->     b'\xaf\n\xeb'
+ ./2023-03-04_23-06-01-592408_cat-jpg/exiftool.txt:8 'JPEG' ->           b'$\xf1\x06'
+ ./2023-03-04_23-06-01-592408_cat-jpg/exiftool.txt:12 'None' ->          b'6\x89\xde'
+ ./2023-03-04_23-06-01-592408_cat-jpg/exiftool.txt:15 '7a78f3d9cfb1ce42ab5a3aa30573d617' ->      b'\xed\xae\xfc\x7fw}q\xf6\xf5q\xee6i\xbeZ\xdd\xa6\xb7\xd3\x9e\xf7w\xad{'
+ ./2023-03-04_23-06-01-592408_cat-jpg/exiftool.txt:16    PicoCTF 
+ ./2023-03-04_23-06-01-592408_cat-jpg/exiftool.txt:19 'cGljb0NURnt0aGVfbTN0YWRhdGFfMXNfbW9kaWZpZWR9' ->          b'picoCTF{the_m3tadata_1s_modified}' 
+ ./2023-03-04_23-06-01-592408_cat-jpg/exiftool.txt:20    PicoCTF 
+ ./2023-03-04_23-06-01-592408_cat-jpg/exiftool.txt:21 '2560' ->          b'\xdb\x9e\xb4'
+ ./2023-03-04_23-06-01-592408_cat-jpg/exiftool.txt:22 '1598' ->          b'\xd7\x9f|'
+ ./2023-03-04_23-06-01-592408_cat-jpg/exiftool.txt:23 'Baseline DCT, Huffman coding' ->          b'\x05\xab\x1e\x96)\xde\x0c$\xc7\xb9\xf7\xe6jw(v)\xe0'
+```
