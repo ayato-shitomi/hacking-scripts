@@ -1,6 +1,17 @@
 # hacking-scripts
 ハッキングやセキュリティ関連のスクリプト
 
+## vigenere_cipher_decode
+
+vigenere_cipherのカギを見つけ出します。
+
+```
+$ python vigenere_cipher_decode.py
+encrypt message : Wejmvse - Fbtkqal zqb rso rnl cwihsf
+law message     : Orestis - Hacking for fun and profit
+['i', 'n', 'f', 'u', 'c', 'k', 'm', 'a', 'a', 'a', 'y', 'b', 'r', 'a', 'i', 'n', 'f', 'a', 'u', 'c', 'k', 'a', 'm', 'y', 'b', 'a', 'r', 'a', 'i', 'a', 'n', 'f', 'u', 'c', 'k', 'm']
+```
+
 ## ascii_decoddr
 
 任意の進数から10進数への変換を行い、ASCIIへの変換もする
